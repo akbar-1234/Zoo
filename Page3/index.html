@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async="" src="js/gtm.js" nonce=""></script>
+    <script type="text/javascript" async="" src="js/analytics.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script id="gtmScript" nonce="">
+      (function (w, d, s, l, i) {
+        // ----- debug nonce attribute ----- //
+        //var gtmn = d.querySelector('[nonce]');
+        //var gtmnonce = gtmn.nonce || gtmn.getAttribute('nonce');
+        //console.log("Custom GTM " + gtmnonce);
+        // --------------------------------- //
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        var n = d.querySelector("[nonce]");
+        n && j.setAttribute("nonce", n.nonce || n.getAttribute("nonce"));
+        w.nonceForCustomScripts = n.nonce || n.getAttribute("nonce");
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P834TG");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+      user-scalable="no"
+    />
+    <title>Taronga Zoo | Checkout</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="google-site-verification"
+      content="BjIESZdcMOP7APoFUGbWg7EeqxSIUrYbH38zJUc-OFs"
+    />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
+    <link
+      rel="icon"
+      href="data:image/vnd.microsoft.icon;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAABAQAgABAAEAsAAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AP///wD///8A////AP///wD///8AMo8TKTOOFGgzjhN4Mo8TKf///wD///8AIzUAHSQ3A6ElOAPpJjkEh////wD///8A////AP///wAAgAACNZAUZTSPEnA1kBKMNI8S3TSPE8szkBNuAFUAAyQ4AtIlOAP/JTgD+CU4A5b///8A////AP///wD///8ANY8TeTaUDRP///8A////AP///wD///8A////ACc2BTQlOALRJTcDxic2ACH///8A////AP///wD///8ALosXCzSPE/o0jxOiNI8SVP///wD///8A////AP///wD///8AIEAAEAAAAAH///8A////AP///wD///8A////ADaPEjk0jxOvMYERWCc7ACckNwAcJzYAISQ5A5QlOQPCJjgDlf///wD///8A////AP///wD///8A////AP///wAkOANbJjgD5yU4A/8lOAP/JTgD/yU4A/omOAPnJTgD/CM5BEg1jhJv////AP///wD///8A////AP///wAmNwQ8JTgCzSU4A/8lOAP/JTgD/yU4A/8lOAP/JTgD+SY4A2QrlRUMM5ATlf///wD///8A////AP///wAkSQAHJTcDUyU4AtAlOAP/JTgD/yU4A/0lOAPcJToEkDF/EWo0jRUxM48TaTKPEyn///8A////AP///wAkNwAqJTgD3CU4A/8lOAP6JDgDqCldCmA0jRKbNI8UxDSPE+80jxP/NI8T6DWOEkj///8A////AP///wD///8AJTgDuyU4A/8lOATXIToAH////wD///8AMpEUMzSOE3o0jxOSNZAUZTeSEg7///8A////AP///wD///8A////ACU4A7slOAOzJD0AFf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP/4AAD+MAAA//MAAPP/AAD3jwAA8B8AAOA3AADgfwAAhB8AAB9/AAA//wAA//8AAP//AAAoAAAAEAAAACAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+      data-react-helmet="true"
+    />
+    <link href="css/fonts.min.css" rel="stylesheet" data-react-helmet="true" />
+    <link href="css/vendor.9c5d776a.min.css" rel="stylesheet" />
+    <link href="css/main.9c5d776a.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/toastr.min.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="js/api.js" async="" defer=""></script>
+  </head>
+  <body class="nimbus-is-editor">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P834TG"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+      user-scalable="no"
+    />
+    <title>Taronga Zoo | Checkout</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <link
+      rel="icon"
+      href="data:image/vnd.microsoft.icon;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAABAQAgABAAEAsAAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AP///wD///8A////AP///wD///8AMo8TKTOOFGgzjhN4Mo8TKf///wD///8AIzUAHSQ3A6ElOAPpJjkEh////wD///8A////AP///wAAgAACNZAUZTSPEnA1kBKMNI8S3TSPE8szkBNuAFUAAyQ4AtIlOAP/JTgD+CU4A5b///8A////AP///wD///8ANY8TeTaUDRP///8A////AP///wD///8A////ACc2BTQlOALRJTcDxic2ACH///8A////AP///wD///8ALosXCzSPE/o0jxOiNI8SVP///wD///8A////AP///wD///8AIEAAEAAAAAH///8A////AP///wD///8A////ADaPEjk0jxOvMYERWCc7ACckNwAcJzYAISQ5A5QlOQPCJjgDlf///wD///8A////AP///wD///8A////AP///wAkOANbJjgD5yU4A/8lOAP/JTgD/yU4A/omOAPnJTgD/CM5BEg1jhJv////AP///wD///8A////AP///wAmNwQ8JTgCzSU4A/8lOAP/JTgD/yU4A/8lOAP/JTgD+SY4A2QrlRUMM5ATlf///wD///8A////AP///wAkSQAHJTcDUyU4AtAlOAP/JTgD/yU4A/0lOAPcJToEkDF/EWo0jRUxM48TaTKPEyn///8A////AP///wAkNwAqJTgD3CU4A/8lOAP6JDgDqCldCmA0jRKbNI8UxDSPE+80jxP/NI8T6DWOEkj///8A////AP///wD///8AJTgDuyU4A/8lOATXIToAH////wD///8AMpEUMzSOE3o0jxOSNZAUZTeSEg7///8A////AP///wD///8A////ACU4A7slOAOzJD0AFf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP/4AAD+MAAA//MAAPP/AAD3jwAA8B8AAOA3AADgfwAAhB8AAB9/AAA//wAA//8AAP//AAAoAAAAEAAAACAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+      data-react-helmet="true"
+    />
+    
+    <header class="nav">
+      <a href="../index.html" class="logo">
+        <img id="logo_img" src="https://ticketsales.taronga.org.au/media/sydney.2f14d233.svg" alt="Taronga Zoo">
+</a>
+      <ul class="menu"></ul>
+    </header>
+    <div style="padding-top: 90px;">
+      <div>
+        <div
+          class="steps-block"
+          role="progressbar"
+          aria-valuemin="1"
+          aria-valuemax="2"
+          aria-valuenow="2"
+          aria-valuetext="Step 2 of 3: Choose Your Date"
+        >
+          <ul class="steps">
+            <li class="is-complete last">
+              <span></span>
+              <p>Choose Your Tickets</p>
+            </li>
+
+            <li class="is-active">
+              <span></span>
+              <p>Choose Your Date</p>
+            </li>
+
+            <li class="">
+              <span></span>
+              <p>Enter Your Details</p>
+            </li>
+          </ul>
+        </div>
+        <div class="step-container">
+          <div>
+            <div class="main-header">
+              <h1>Select your Visit Date</h1>
+              <a href="../Page2/index.html" class="previous-page">Back</a>
+            </div>
+            <div id="row1" style="display: flex;" class="row">
+              <div class="col-8">
+                <div class="form-container">
+                <div id="root">
+                <div class="for_perevodss">
+            
+                    
+            
+                  <div class="m-modal_wrap m-dialog m-modal-common">
+                    <section class="m-modal c-commonModalOpen">
+                      <div class="m-modalContent c-commonModalContent"></div>
+                      <div class="m-modalBtn c-commonModalBtn"></div>
+                    </section>
+                  </div>
+          
+                  <input
+                    type="hidden"
+                    class="c-unexpectedError"
+                    data-url="/error/?lang=en"
+                  />
+                </header>
+          
+                <main role="main" id="maincontent" class="m-main">
+                  <input
+                    type="hidden"
+                    id="get-calendar-url"
+                    value="/search/calender/get/?lang=en"
+                  />
+                  <input
+                    type="hidden"
+                    id="get-ticket-url"
+                    value="/search/showajax/?lang=en"
+                  />
+                  <input
+                    type="hidden"
+                    id="cart-add-product-url"
+                    value="/cart/product/add/?lang=en"
+                  />
+                  <input
+                    type="hidden"
+                    id="cart-remove-cart-url"
+                    value="/cart/remove/?lang=en"
+                  />
+          
+                  <input type="hidden" id="days" value="1" />
+                  <input type="hidden" id="group" value="5" />
+                  <input
+                    type="hidden"
+                    id="query-string"
+                  />
+          
+                  <input type="hidden" id="ticket-unit" value="" />
+                  <input type="hidden" id="currency-symbol" value="�" />
+                  <input
+                    type="hidden"
+                    id="sub-total-label"
+                    value="Total (tax included)"
+                  />
+                  <input type="hidden" id="sub-total-multiply" value="×" />
+                  <input type="hidden" id="detail-summary-holiday" value="" />
+          
+                  <div style="display: none;" class="m-summaryHeader">
+                    <dl>
+                      <dt></dt>
+                      <dd class="day_person"></dd>
+                    </dl>
+                    <p class="m-functionLink">
+                      <a></a>
+                    </p>
+                  </div>
+                  <section>
+          
+                    <div class="Kalendar_big">
+                      <div class="Kalendar_div">
+                        
+                        <div id="aylantirish"></div>
+            
+            <!-- <div class="hello_href"></div> -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div> -->
+              </div>
+              <div  id="aylantirish1" class="swiper-button-next"></div>
+              <div  id="aylantirish2" class="swiper-button-prev"></div>
+            </div><div id="calendar"></div>
+                        <table style="display: none;"
+                          id="calendar-table"
+                          class="m-calendar"
+                          data-select_days="1"
+                          data-calendar_name="calendar"
+                        >
+                        <div style="display: none;" class="m-detailBalloon" data-calendar_name="calendar">
+                  
+                          <h4 class="c-calendar-balloon-date"></h4>
+                          <ul class="c-calendar-balloon-info">
+                              <li>Hours 9:00～21:00</li>
+                              <li class="pasport_price"></li>
+                          </ul>
+                      
+                      
+                  </div>
+                        
+                        
+                          <tbody
+                            class="c-calendar-tbody"
+                            data-pid="temporaryid"
+                            data-selected="[]"
+                            data-dates_earlynextmonth=""
+                            data-nextmonth_firstdaystatus=""
+                            onclick="clickCalendar()"
+                          >
+                            <tr>
+                              <td></td>
+          
+                              <td></td>
+          
+                              <td></td>
+          
+                              <td></td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240201"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>1</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240202"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>2</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-saturday hello_uzb"
+                                data-date="20240203"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>3</span>
+                                </a>
+                              </td>
+                            </tr>
+          
+                            <tr>
+                              <td
+                                class="is-NG is-nosale is-sunday hello_uzb"
+                                data-date="20240204"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>4</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240205"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>5</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240206"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>6</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240207"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>7</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240208"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>8</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240209"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>9</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-saturday hello_uzb"
+                                data-date="20240210"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>10</span>
+                                </a>
+                              </td>
+                            </tr>
+          
+                            <tr>
+                              <td
+                                class="is-NG is-nosale is-holiday hello_uzb"
+                                data-date="20240211"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>11</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-holiday hello_uzb"
+                                data-date="20240212"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>12</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240213"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>13</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240214"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>14</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240215"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>15</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240216"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>16</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-saturday is-sale hello_uzb"
+                                data-date="20240217"
+                                data-stock="is-sale"
+                                data-price="9900"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>17</span>
+          
+                                  <span class="txt-price g-hidden">9900</span>
+                                </a>
+                              </td>
+                            </tr>
+          
+                            <tr>
+                              <td
+                                class="is-OK is-sunday is-sale is-active hello_uzb"
+                                data-date="20240218"
+                                data-stock="is-sale"
+                                data-price="9400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>18</span>
+          
+                                  <span class="txt-price g-hidden">9400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240219"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>19</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240220"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>20</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240221"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>21</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240222"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>22</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-holiday is-sale hello_uzb"
+                                data-date="20240223"
+                                data-stock="is-sale"
+                                data-price="10900"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>23</span>
+          
+                                  <span class="txt-price g-hidden">10900</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-saturday is-sale hello_uzb"
+                                data-date="20240224"
+                                data-stock="is-sale"
+                                data-price="10900"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>24</span>
+          
+                                  <span class="txt-price g-hidden">10900</span>
+                                </a>
+                              </td>
+                            </tr>
+          
+                            <tr>
+                              <td
+                                class="is-OK is-sunday is-sale hello_uzb"
+                                data-date="20240225"
+                                data-stock="is-sale"
+                                data-price="9400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>25</span>
+          
+                                  <span class="txt-price g-hidden">9400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240226"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>26</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240227"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>27</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240228"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>28</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240229"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>29</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td></td>
+          
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </section>
+
+                </main>
+                  
+              </div></div></div>
+
+                <div class="pay-container booking" onclick="window.location = '../Page4/index.html'">
+                  <button
+                    class="button-primary full-width-button"
+                    id="btnBookingDate"
+                  >
+                    Continue
+                  </button>
+                </div>
+              </div>
+
+              <div class="sticky-outer-wrapper col-4">
+                <div
+                  class="sticky-inner-wrapper"
+                  style="
+                    position: relative;
+                    transform: translate3d(0px, 0px, 0px);
+                  "
+                >
+                  <div id="CartContainer">
+                    <div class="receipt">
+                      <div class="item-type">
+                        <div
+                          class="image"
+                          style="
+                            background-image: url('../media/sydneyTickets.jpg');
+                          "
+                        ></div>
+                        <h2 id="ZooNameDate">Taronga Zoo Sydney Entry</h2>
+                      </div>
+                      <div class="subtotal receipt-edge">
+                       <div class="prices_div">
+
+                         
+                        </div>
+                        <div class="">
+<div class="hello"></div>
+                          
+<div>
+  <span class="bill-item"
+                                    ><p class="bill-item-name">
+                                      TZ Online Transaction Fee
+                                    </p>
+                                    <p class="price">$0.00</p>
+                                    <br
+                                  /></span>
+  <hr>
+  <span class="bill-item"
+    ><p>Subtotal</p>
+    <p class="price" id="AllPrice_of_page3">$123.90</p></span
+  >
+  <div>
+    <span class="bill-item"
+      ><p>Tax</p>
+      <p class="price">$0.00</p>
+      <br
+    /></span>
+    <span class="bill-item subtotal-price"
+      ><p>Total</p>
+      <p class="price" id="AllPrice_of_page4">$123.90</p></span>
+  </div>
+</div>
+                        </div>
+                      </div>
+                      <span
+                        role="log"
+                        class="visually-hidden"
+                        aria-live="polite"
+                        aria-atomic="true"
+                        >Cart total: $123.90</span
+                      >
+
+                      <input
+                        class="hidden-amount"
+                        data-val="true"
+                        data-val-number="The field Tax must be a number."
+                        data-val-required="The Tax field is required."
+                        id="Tax"
+                        name="Tax"
+                        type="hidden"
+                        value="0.00"
+                      />
+                      <input
+                        class="hidden-amount"
+                        id="Total"
+                        name="Total"
+                        type="hidden"
+                        value="123.90"
+                      />
+                    </div>
+
+                    <div id="PromoContainer">
+                      <div class="coupon-code">
+                        <span
+                          class="error-message field-validation-valid"
+                          data-valmsg-for="CouponCode"
+                          data-valmsg-replace="true"
+                        ></span>
+                        <div id="promo-code" class="promo-code">
+                          <fieldset class="">
+                            <span
+                              ><label for="coupon" class=""
+                                >Promo Code</label
+                              ></span
+                            >
+                            <div class="input-wrapper">
+                              <input
+                                class="text-box single-line"
+                                id="CouponCode"
+                                name="CouponCode"
+                                type="text"
+                                value=""
+                              />
+                              <input
+                                class="hidden-amount"
+                                id="CodeType"
+                                name="CodeType"
+                                type="hidden"
+                                value=""
+                              />
+                            </div>
+                            <div class="invisible">
+                              <input
+                                class="text-box single-line"
+                                id="Discount"
+                                name="Discount"
+                                type="text"
+                                value="0.90"
+                              />
+                              <input
+                                class="text-box single-line"
+                                id="BinCode"
+                                name="BinCode"
+                                type="text"
+                                value=""
+                              />
+                              <input
+                                class="check-box"
+                                data-val="true"
+                                data-val-required="The ShowDiscount field is required."
+                                id="ShowDiscount"
+                                name="ShowDiscount"
+                                type="checkbox"
+                                value="true"
+                              />
+                            </div>
+                          </fieldset>
+                          <button
+                            class="button-primary promo-code-button"
+                            id="PromoCodeButton"
+                          >
+                            Apply
+                          </button>
+                          <div class="visa-card-wrap">
+                            <p>
+                              The Red Energy 2 for 1 offer code is currently not
+                              working online for all customers. If the discount
+                              does not apply or you are overcharged when the
+                              payment is processed, Taronga will refund the
+                              difference.
+                            </p>
+
+                            <p>
+                              Please email
+                              <a href="#">tz@zoo.nsw.gov.au</a> with your
+                              receipt. Alternatively, please purchase your Zoo
+                              ticket at the gate and bring proof of being a Red
+                              Energy customer and the offer will be honored.
+                            </p>
+
+                            <p>
+                              We apologise for the inconvenience and are working
+                              swiftly to resolve the issue.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <input
+      id="cartUrl"
+      name="cartUrl"
+      type="hidden"
+      value="/Home/CartPartial"
+    />
+    <input
+      id="animalEncounterUrl"
+      name="animalEncounterUrl"
+      type="hidden"
+      value="/Home/AnimalEncounterPartial"
+    />
+    <input
+      id="dataLayerEventUrl"
+      name="itemListUrl"
+      type="hidden"
+      value="/Home/DataLayerEvent"
+    />
+    <input
+      id="securePayUrl"
+      name="securePayUrl"
+      type="hidden"
+      value="/Home/SecurePayPartial"
+    />
+    <input
+      id="promoCodeUrl"
+      name="promoCodeUrl"
+      type="hidden"
+      value="/Home/PromoCodePartial"
+    />
+    <input
+      id="checkSoldOutDaysUrl"
+      name="checkSoldOutDaysUrl"
+      type="hidden"
+      value="/Home/CheckSoldOutDays"
+    />
+    <input
+      id="checkSoldOutDaysChangeDateUrl"
+      name="checkSoldOutDaysChangeDateUrl"
+      type="hidden"
+      value="/Home/CheckSoldOutDaysChangeDate"
+    />
+    <input
+      id="reCaptchaVerifyUrl"
+      name="reCaptchaVerifyUrl"
+      type="hidden"
+      value="/Callback/ReCaptchaVerify"
+    />
+    <input
+      id="captureFailAttemptUrl"
+      name="captureFailAttemptUrl"
+      type="hidden"
+      value="/Callback/CaptureFailAttempt"
+    />
+    <input
+      id="threeDSCardVerifyUrl"
+      name="threeDSCardVerifyUrl"
+      type="hidden"
+      value="/Home/PaymentInitiate3DS"
+    />
+    <input
+      id="getStateDataUrl"
+      name="getStateDataUrl"
+      type="hidden"
+      value="/Home/GetStateDataByCountry"
+    />
+
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/tippy.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+    <script type="text/javascript" src="js/toastr.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="../Page3/js/calendar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      
+  document.querySelector("#logo_img").src="https://ticketsales.taronga.org.au/media/dubbo.2856a10f.svg"
+    </script>
+  </body>
+  <!-- Tippy -->
+</html>
